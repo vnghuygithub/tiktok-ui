@@ -14,7 +14,7 @@ function Menu({ children, items = [] }) {
     return (
         <Tippy
             interactive
-            visible
+            delay={[0, 700]}
             placement="bottom-end"
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
