@@ -4,12 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
     faSpinner,
-    faMagnifyingGlass,
     faEllipsisVertical,
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
     faCoins,
     faGear,
     faUser,
@@ -25,6 +23,13 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
+import {
+    InboxIcon,
+    MessageIcon,
+    SearchIcon,
+    UploadIcon,
+} from '~/components/Icons';
+import Image from '~/components/Image';
 
 const cx = classNames.bind(styles);
 
@@ -143,7 +148,7 @@ function Header() {
                         />
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -154,10 +159,10 @@ function Header() {
                             <Tippy
                                 content="Upload video"
                                 placement="bottom"
-                                delay={200}
+                                delay={[0, 200]}
                             >
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
                                 </button>
                             </Tippy>
                         </>
@@ -172,10 +177,10 @@ function Header() {
                         onChange={handleMenuChange}
                     >
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('user-avatar')}
-                                alt="Huy"
-                                src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tiktok-obj/1653274089859073.jpeg?x-expires=1688976000&x-signature=b8YVOzk1AAEMqO6xW2BDNksU300%3D"
+                                src="https://files.fullstack.edu.vn/f8-prod/user_avatars/1/623d4b2d95cec.png"
+                                alt="Nguyen Van A"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
