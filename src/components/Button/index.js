@@ -62,7 +62,20 @@ function Button({
 }
 
 Button.propTypes = {
-    children: PropTypes.node.isRequired, //.node: children phai la gia tri co the render duoc; .isRequired: children can truyen 1 cai gi do, k dc de trong
+    to: PropTypes.string,
+    href: PropTypes.string,
+    primary: PropTypes.bool,
+    outline: PropTypes.bool,
+    text: PropTypes.bool,
+    rounded: PropTypes.bool,
+    disable: PropTypes.bool,
+    small: PropTypes.bool,
+    large: PropTypes.bool,
+    rightIcon: PropTypes.node,
+    leftIcon: PropTypes.node,
+    children: PropTypes.node.isRequired,
+    className: PropTypes.string,
+    onClick: PropTypes.func,
 };
 
 export default Button;
