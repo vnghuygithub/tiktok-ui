@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
@@ -59,5 +60,9 @@ function Button({
         </Comp>
     );
 }
+
+Button.propTypes = {
+    children: PropTypes.node.isRequired, //.node: children phai la gia tri co the render duoc; .isRequired: children can truyen 1 cai gi do, k dc de trong
+};
 
 export default Button;
